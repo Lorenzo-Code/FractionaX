@@ -1,0 +1,154 @@
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'buttons';
+/* Variables */
+$primary-color: #0ab8ff;
+$secondary-color: #0056b3;
+$background-color: linear-gradient(to bottom, #0ab8ff, #0056b3, #ffffff);
+$text-color: #030303;
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+/* Fix sticky header issue */
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: linear-gradient(135deg, rgb(25, 29, 43)50%, #ffffff 50%);
+
+  .navbar {
+    .navbar-toggler {
+      background-color: $primary-color; /* Visible toggle button */
+      border: none;
+    }
+
+    .navbar-collapse {
+      background-color: $background-color; /* Dropdown background matches navbar */
+    }
+
+    .dropdown-menu {
+      background-color: $background-color;
+      color: $text-color;
+
+      .dropdown-item {
+        color: $text-color;
+
+        &:hover {
+          color: $primary-color;
+          background-color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+.navbar-brand img {
+  max-height: 200px; /* Adjust the size as needed */
+  width: auto;       /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+/* Navbar dropdown background */
+.navbar {
+  .navbar-collapse {
+    background-color: $background-color;
+    /* Ensure dropdown has the same background as the navbar */
+    color: $text-color;
+    /* Make text visible on the dropdown */
+
+    .nav-link {
+      color: $text-color;
+
+      &:hover {
+        color: $primary-color;
+        /* Highlight on hover */
+      }
+    }
+  }
+
+  .navbar-toggler {
+    background-color: $primary-color;
+    /* Style the toggle button for visibility */
+    border: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px $primary-color;
+      /* Add focus styling */
+    }
+  }
+}
+
+/* Buttons */
+.btn-primary-grad {
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
+  color: $text-color;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: linear-gradient(90deg, $secondary-color, $primary-color);
+    transform: scale(1.05);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: $background-color;
+  color: $text-color;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid $primary-color;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+/* Logo and Navigation Wrapper */
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack logo and navigation vertically */
+    align-items: center;    /* Center everything on mobile */
+  }
+
+  .navbar-brand img {
+    max-height: 60px; /* Adjust logo size */
+    margin-bottom: 10px; /* Add spacing on mobile */
+  }
+
+  .navbar-collapse {
+    @media (max-width: 768px) {
+      width: 100%; /* Make dropdown take full width */
+      text-align: center;
+    }
+  }
+}
+
+/* Toggler Button */
+.navbar-toggler {
+  @media (max-width: 768px) {
+    margin-bottom: 10px; /* Add spacing below toggler button */
+  }
+}

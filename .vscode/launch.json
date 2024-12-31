@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",// This is the version of the configuration file format. React app uses version 0.2.0
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch React App",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src"
+        }
+    ]
+}
+
+// {
+//     "version": "0.2.0",  // This is the version of the configuration file format. node.jd uses version 0.2.0
+//     "configurations": [
+//       {
+//         "type": "node",
+//         "request": "launch",
+//         "name": "Run Tests",
+//         "program": "${workspaceFolder}/node_modules/jest/bin/jest.js",
+//         "args": ["--runInBand"],
+//         "cwd": "${workspaceFolder}",
+//         "console": "integratedTerminal",
+//         "internalConsoleOptions": "neverOpen"
+//       }
+//     ]
+//   }
+  

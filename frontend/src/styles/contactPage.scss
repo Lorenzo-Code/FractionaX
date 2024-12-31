@@ -1,0 +1,106 @@
+// Variables
+$primary-color: #0ab8ff;
+$secondary-color: #0056b3;
+$background-color: #f4f4f4;
+$text-color: #333;
+$success-color: #28a745;
+
+// General Styles
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color; 
+  color: $text-color;
+  line-height: 1.6;
+}
+
+// Container
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1rem;
+    color: darken($text-color, 20%);
+    margin-bottom: 30px;
+  }
+}
+
+// Form
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  label {
+    font-size: 1rem;
+    color: $text-color;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 4px rgba($primary-color, 0.4);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    background: linear-gradient(90deg, $primary-color, $secondary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: linear-gradient(90deg, $secondary-color, $primary-color);
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Success Message
+.success-message {
+  color: $success-color;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+// Responsive Design
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

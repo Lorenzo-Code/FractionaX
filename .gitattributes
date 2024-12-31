@@ -1,0 +1,43 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Specific settings for individual file types or directories
+bootstrap-4.0.0/.eslintignore text eol=lf
+bootstrap-4.0.0/.editorconfig text eol=lf
+bootstrap-4.0.0/.gitattributes text eol=lf
+bootstrap-4.0.0/.gitignore text eol=lf
+bootstrap-4.0.0/.stylelintignore text eol=lf
+bootstrap-4.0.0/.stylelintrc text eol=lf
+bootstrap-4.0.0/CNAME text eol=lf
+bootstrap-4.0.0/Gemfile text eol=lf
+bootstrap-4.0.0/Gemfile.lock text eol=lf
+bootstrap-4.0.0/LICENSE text eol=lf
+bootstrap-4.0.0/assets/img/favicons/browserconfig.xml text eol=lf
+bootstrap-4.0.0/build/.htmllintrc text eol=lf
+bootstrap-4.0.0/build/ship.sh text eol=lf
+bootstrap-4.0.0/build/upload-preview.sh text eol=lf
+bootstrap-4.0.0/docs/4.0/examples/.stylelintrc text eol=lf
+bootstrap-4.0.0/nuget/MyGet.ps1 text eol=lf
+bootstrap-4.0.0/nuget/bootstrap.nuspec text eol=lf
+bootstrap-4.0.0/nuget/bootstrap.sass.nuspec text eol=lf
+
+collected_static/asset-manifest.json text eol=lf
+collected_static/build/asset-manifest.json text eol=lf
+collected_static/build/js/453.8ab44547.chunk.js text eol=lf
+collected_static/build/js/main.3225c960.js text eol=lf
+collected_static/build/js/main.3225c960.js.LICENSE.txt text eol=lf
+collected_static/build/static/css/main.f855e6bc.css text eol=lf
+collected_static/css/main.f855e6bc.css text eol=lf
+collected_static/js/453.8ab44547.chunk.js text eol=lf
+collected_static/js/main.32dd0273.js text eol=lf
+collected_static/js/main.32dd0273.js.LICENSE.txt text eol=lf
+collected_static/manifest.json text eol=lf
+collected_static/robots.txt text eol=lf
+collected_static/static/css/main.f855e6bc.css text eol=lf
+collected_static/static/js/453.8ab44547.chunk.js text eol=lf
+collected_static/static/js/main.32dd0273.js text eol=lf
+collected_static/static/js/main.32dd0273.js.LICENSE.txt text eol=lf
+
+frontend/package.json text eol=lf
+frontend/src/App.js text eol=lf
+frontend/src/index.js text eol=lf
