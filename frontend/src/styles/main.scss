@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'header';
-@import 'footer';
-@import 'buttons';
+// @import 'variables';
+// @import 'header';
+// @import 'footer';
+// @import 'buttons';
 /* Variables */
 $primary-color: #0ab8ff;
 $secondary-color: #0056b3;
@@ -20,7 +20,7 @@ body {
 /* Fix sticky header issue */
 
 .header-sticky {
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 1020;
   background: linear-gradient(135deg, rgb(25, 29, 43)50%, #ffffff 50%);
@@ -106,22 +106,22 @@ body {
 }
 
 /* Footer */
-footer {
-  background-color: $background-color;
-  color: $text-color;
-  text-align: center;
-  padding: 20px 0;
-  border-top: 2px solid $primary-color;
+// footer {
+//   background-color: $background-color;
+//   color: $text-color;
+//   text-align: center;
+//   padding: 20px 0;
+//   border-top: 2px solid $primary-color;
 
-  a {
-    color: $primary-color;
-    text-decoration: none;
+//   a {
+//     color: $primary-color;
+//     text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
 /* Logo and Navigation Wrapper */
 .navbar-wrapper {
   display: flex;
@@ -151,4 +151,569 @@ footer {
   @media (max-width: 768px) {
     margin-bottom: 10px; /* Add spacing below toggler button */
   }
+}
+
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 1rem; /* Further reduce padding on small screens */
+    .benefits-grid {
+      gap: 0.5rem; /* Tighter spacing */
+    }
+    .benefit-item {
+      font-size: 0.8rem; /* Smaller text */
+    }
+  }
+}
+
+/* Section Background */
+.homepage-section {
+  background-color: rgb(254, 255, 255); /* Matches Bootstrap's bg-secondary bg-opacity-50 */
+  position: relative;
+  padding-top: 4rem; /* Adjust for equivalent pt-xl-8 */
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+
+/* Container Styling */
+.homepage-container {
+  position: relative;
+  padding-top: 1rem; /* Matches pt-4 */
+  padding-bottom: 2rem; /* Matches pb-lg-8 */
+  text-align: center;
+}
+
+/* Title Styling */
+.homepage-title {
+  font-size: 2.75rem; /* Bootstrap's display-4 equivalent */
+  font-weight: 700; /* Matches fw-bold */
+  color: $text-color; /* Matches text-primary */
+  margin-bottom: 2rem; /* Matches mb-lg-4 */
+}
+
+/* Description Styling */
+.homepage-description {
+  font-size: 1.25rem; /* Bootstrap's lead equivalent */
+  color: $text-color; /* Matches text-dark */
+}
+
+/* Video Wrapper */
+.homepage-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 3rem; /* Matches mt-5 */
+}
+
+/* Video Element */
+.homepage-video-element {
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matches the shadow class */
+  border-radius: 0.5rem; /* Matches the rounded class */
+}
+
+/* Features Section */
+.features-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.features-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: start;
+}
+
+.feature-icon {
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: $primary-color;
+}
+
+/* Properties Section */
+.properties-section {
+  padding: 4rem 2rem;
+}
+
+.properties-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.property-item {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.property-details {
+  padding: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.actions button {
+  background-color: $primary-color;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: $secondary-color;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 2rem 1rem; /* Reduce padding */
+  background-color: #f4f4f4; /* Keep the background consistent */
+  text-align: center; /* Align content in the center */
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column size for a smaller grid */
+    gap: 1rem; /* Reduce spacing between items */
+  }
+
+  .benefit-item {
+    display: flex;
+    flex-direction: column; /* Stack icons and text */
+    align-items: center;
+    gap: 0.5rem; /* Smaller gap between icon and text */
+    padding: 1rem; /* Reduce internal spacing */
+    font-size: 0.9rem; /* Reduce font size */
+
+    .benefit-icon {
+      font-size: 1.5rem; /* Smaller icon size */
+      color: #0ab8ff; /* Icon color */
+    }
+
+    .benefit-heading {
+      font-size: 1.2rem; /* Reduce heading size */
+      font-weight: bold;
+    }
+
+    .benefit-description {
+      font-size: 0.8rem; /* Smaller text for description */
+      color: #505050; /* Subtle text color */
+    }
+  }
+}
+
+
+/* Column Styles */
+.col-6 {
+  width: 50%;
+}
+.col-md-3 {
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+}
+.col-lg-2 {
+  @media (min-width: 992px) {
+    width: 16.6667%;
+  }
+}
+.col-md-6 {
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+.col-lg-4 {
+  @media (min-width: 992px) {
+    width: 33.3333%;
+  }
+}
+
+/* Headings */
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation Links */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .nav-item {
+    .nav-link {
+      color: #ddd;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #0ab8ff;
+      }
+    }
+  }
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+
+.bg-primary {
+  background-color: #0ab8ff;
+}
+.bg-success {
+  background-color: #28a745;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  .form-control {
+    flex: 1;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .btn {
+    background-color: #0ab8ff;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+/* Social Links */
+.list-inline {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  .list-inline-item {
+    margin-right: 0.5rem;
+
+    .btn-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+      border-radius: 50%;
+      color: #fff;
+      background-color: #444;
+
+      &:hover {
+        background-color: #0ab8ff;
+      }
+    }
+  }
+}
+
+/* Divider */
+hr {
+  border-color: #444;
+  margin: 2rem 0;
+}
+
+/* Bottom Footer */
+.d-md-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .text-body {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.text-body {
+  font-size: 0.875rem;
+  color: #bbb;
+
+  a {
+    color: #0ab8ff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Policy Links */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .nav-link {
+    font-size: 0.875rem;
+    color: #bbb;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+
+  .row {
+    align-items: center;
+  }
+
+  .faq-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  .faq-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #030303;
+  }
+
+  .faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1rem;
+
+      .faq-question {
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: left;
+        width: 100%;
+        padding: 0.5rem 0;
+        color: #030303;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #0ab8ff;
+        }
+
+        .faq-icon {
+          font-size: 1.5rem;
+          color: #0ab8ff;
+        }
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        font-size: 1rem;
+        color: #555;
+
+        &.show {
+          max-height: 100px;
+          opacity: 1;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: rgb(25, 29, 43); /* Dark background */
+  color: #f8f9fa; /* Light text color */
+  padding: 3rem 0;
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    .logo-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+     // Larger logo on desktop
+     @media (min-width: 768px) {
+      max-width: 600px; // Increase size for larger screens
+    }
+
+    // Smaller logo on very small screens
+    @media (max-width: 576px) {
+      max-width: 320px; // Reduce size for smaller screens
+    }
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+
+    .nav-link {
+      color: #f8f9fa;
+      padding: 0.25rem 0;
+
+      &:hover {
+        color: #0ab8ff; /* Primary color */
+        text-decoration: underline;
+      }
+    }
+
+    .badge {
+      background-color: #0ab8ff; /* Primary color */
+      color: #fff;
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .form-control {
+      flex-grow: 1;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .btn {
+      background-color: #0ab8ff; /* Primary color */
+      border: none;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background-color: #0056b3; /* Secondary color */
+      }
+    }
+  }
+
+  .list-inline {
+    margin-top: 1rem;
+
+    .btn-icon {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-color: #0ab8ff; /* Primary color */
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      line-height: 2rem;
+      font-size: 1rem;
+
+      &:hover {
+        background-color: #0056b3; /* Secondary color */
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgb(25, 29, 43); /* Slight border for separation */
+    padding-top: 1rem;
+
+    .text-body {
+      color: #868e96;
+    }
+
+    .nav {
+      flex-direction: row;
+
+      .nav-link {
+        color: #868e96;
+
+        &:hover {
+          color: #0ab8ff;
+        }
+      }
+    }
+  }
+}
+
+.text-white h6 {
+  color: #ffffff !important;
+}
+
+.footer-logo-custom {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;    /* Centers vertically */
+}
+
+.footer-logo-img {
+  max-width: 100%; /* Ensures it scales appropriately */
+  height: auto;    /* Maintains aspect ratio */
 }

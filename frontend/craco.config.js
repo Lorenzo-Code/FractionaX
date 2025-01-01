@@ -38,6 +38,24 @@ module.exports = {
                 }
             });
 
+            // Add Webpack rule for handling image files
+            webpackConfig.module.rules.push({
+                test: /\.(png|jpe?g|gif)$/i, // Match image file types
+                type: 'asset/resource',     // Use Webpack's asset/resource type
+                generator: {
+                    filename: 'static/media/[name].[contenthash:8][ext]', // Define output path and name
+                },
+            });
+
+            // Add Webpack rule for handling video files
+            webpackConfig.module.rules.push({
+                test: /\.(mp4|webm|ogg)$/i, // Match video file types
+                type: 'asset/resource',     // Use Webpack's asset/resource type
+                generator: {
+                    filename: 'static/media/[name].[contenthash:8][ext]', // Define output path and name
+                },
+            });
+
             return webpackConfig;
         },
     },
