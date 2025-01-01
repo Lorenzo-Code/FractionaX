@@ -1,6 +1,5 @@
 # Set default behavior to automatically normalize line endings
 * text=auto
-
 # Specific settings for individual file types or directories
 bootstrap-4.0.0/.eslintignore text eol=lf
 bootstrap-4.0.0/.editorconfig text eol=lf
@@ -20,7 +19,6 @@ bootstrap-4.0.0/docs/4.0/examples/.stylelintrc text eol=lf
 bootstrap-4.0.0/nuget/MyGet.ps1 text eol=lf
 bootstrap-4.0.0/nuget/bootstrap.nuspec text eol=lf
 bootstrap-4.0.0/nuget/bootstrap.sass.nuspec text eol=lf
-
 collected_static/asset-manifest.json text eol=lf
 collected_static/build/asset-manifest.json text eol=lf
 collected_static/build/js/453.8ab44547.chunk.js text eol=lf
@@ -37,7 +35,7 @@ collected_static/static/css/main.f855e6bc.css text eol=lf
 collected_static/static/js/453.8ab44547.chunk.js text eol=lf
 collected_static/static/js/main.32dd0273.js text eol=lf
 collected_static/static/js/main.32dd0273.js.LICENSE.txt text eol=lf
-
 frontend/package.json text eol=lf
 frontend/src/App.js text eol=lf
 frontend/src/index.js text eol=lf
+frontend/public/videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
