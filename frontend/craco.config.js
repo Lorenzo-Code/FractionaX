@@ -3,18 +3,27 @@ const path = require('path');
 module.exports = {
     webpack: {
         configure: (webpackConfig) => {
+            // Output configuration
             webpackConfig.output = {
                 ...webpackConfig.output,
-                path: path.resolve(__dirname, 'build'), // Output in frontend/build
-                publicPath: '/static/', // Match Django's STATIC_URL
-                filename: 'static/js/[name].[contenthash:8].js', // JavaScript files
-                chunkFilename: 'static/js/[name].[contenthash:8].chunk.js', // Chunk files
+                path: path.resolve(__dirname, 'build'), // Ensure output in 'build' directory
+                publicPath: '/', // Match Django's STATIC_URL
+                filename: 'static/js/[name].[contenthash:8].js', // Output JS files
+                chunkFilename: 'static/js/[name].[contenthash:8].chunk.js', // Output chunk files
             };
 
-            // Place CSS and media files inside static/
+            // Enable source maps in development and disable in production
+            if (webpackConfig.mode === 'development') {
+                webpackConfig.devtool = 'source-map'; // Enable source maps for debugging
+            } else {
+                webpackConfig.devtool = false; // Disable source maps in production
+            }
+
+            // Update loaders for CSS and media files
             webpackConfig.module.rules.forEach((rule) => {
                 if (rule.oneOf) {
                     rule.oneOf.forEach((one) => {
+                        // Update CSS loader
                         if (one.test && one.test.toString().includes('css')) {
                             if (one.use) {
                                 one.use.forEach((loader) => {
@@ -25,6 +34,7 @@ module.exports = {
                             }
                         }
 
+                        // Update image loader
                         if (one.test && one.test.toString().includes('image')) {
                             if (one.use) {
                                 one.use.forEach((loader) => {
@@ -38,25 +48,26 @@ module.exports = {
                 }
             });
 
-            // Add Webpack rule for handling image files
+            // Add asset/resource handling for images and other static files
             webpackConfig.module.rules.push({
-                test: /\.(png|jpe?g|gif)$/i, // Match image file types
-                type: 'asset/resource',     // Use Webpack's asset/resource type
+                test: /\.(png|jpe?g|gif|svg)$/i, // Match image file types
+                type: 'asset/resource',
                 generator: {
-                    filename: 'static/media/[name].[contenthash:8][ext]', // Define output path and name
+                    filename: 'static/media/[name].[contenthash:8][ext]', // Define output path for images
                 },
             });
 
-            // Add Webpack rule for handling video files
             webpackConfig.module.rules.push({
                 test: /\.(mp4|webm|ogg)$/i, // Match video file types
-                type: 'asset/resource',     // Use Webpack's asset/resource type
+                type: 'asset/resource',
                 generator: {
-                    filename: 'static/media/[name].[contenthash:8][ext]', // Define output path and name
+                    filename: 'static/media/[name].[contenthash:8][ext]', // Define output path for videos
                 },
             });
 
+            // Return the updated Webpack configuration
             return webpackConfig;
         },
     },
 };
+

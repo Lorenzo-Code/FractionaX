@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .features-row {
+      flex-direction: column;
+    }
+  
+    .benefits-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

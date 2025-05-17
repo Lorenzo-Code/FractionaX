@@ -1,0 +1,230 @@
+ .homepage-section {
+      background-color: rgb(254, 255, 255); /* Matches Bootstrap's bg-secondary bg-opacity-50 */
+      position: relative;
+      padding-top: 4rem; /* Adjust for equivalent pt-xl-8 */
+      padding-bottom: 4rem;
+      overflow: hidden;
+    }
+    
+    /* Container Styling */
+    .homepage-container {
+      position: relative;
+      padding-top: 1rem; /* Matches pt-4 */
+      padding-bottom: 2rem; /* Matches pb-lg-8 */
+      text-align: center;
+    }
+    
+    /* Title Styling */
+    .homepage-title {
+      font-size: 2.75rem; /* Bootstrap's display-4 equivalent */
+      font-weight: 700; /* Matches fw-bold */
+      color: $text-color; /* Matches text-primary */
+      margin-bottom: 2rem; /* Matches mb-lg-4 */
+    }
+    
+    /* Description Styling */
+    .homepage-description {
+      font-size: 1.25rem; /* Bootstrap's lead equivalent */
+      color: $text-color; /* Matches text-dark */
+    }
+    
+    /* Video Wrapper */
+    .homepage-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin-top: 3rem; /* Matches mt-5 */
+    }
+    
+    /* Video Element */
+    .homepage-video-element {
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matches the shadow class */
+      border-radius: 0.5rem; /* Matches the rounded class */
+    }
+
+
+/* Global Styles */
+.col-6 {
+  width: 50%;
+}
+.col-md-3 {
+  @media (min-width: 768px) {
+    width: 25%;
+  }
+}
+.col-lg-2 {
+  @media (min-width: 992px) {
+    width: 16.6667%;
+  }
+}
+.col-md-6 {
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+.col-lg-4 {
+  @media (min-width: 992px) {
+    width: 33.3333%;
+  }
+}
+
+/* Headings */
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation Links */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .nav-item {
+    .nav-link {
+      color: #ddd;
+      font-size: 0.9rem;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #0ab8ff;
+      }
+    }
+  }
+}
+
+/* Badge Styles */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+
+.bg-primary {
+  background-color: #0ab8ff;
+}
+.bg-success {
+  background-color: #28a745;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  .form-control {
+    flex: 1;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .btn {
+    background-color: #0ab8ff;
+    color: #fff;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+/* Social Links */
+.list-inline {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+
+  .list-inline-item {
+    margin-right: 0.5rem;
+
+    .btn-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+      border-radius: 50%;
+      color: #fff;
+      background-color: #444;
+
+      &:hover {
+        background-color: #0ab8ff;
+      }
+    }
+  }
+}
+
+/* Divider */
+hr {
+  border-color: #444;
+  margin: 2rem 0;
+}
+
+/* Bottom Footer */
+.d-md-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .text-body {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.text-body {
+  font-size: 0.875rem;
+  color: #bbb;
+
+  a {
+    color: #0ab8ff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Policy Links */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  .nav-link {
+    font-size: 0.875rem;
+    color: #bbb;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

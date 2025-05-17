@@ -1,0 +1,168 @@
+$primary-color: #0ab8ff;
+$secondary-color: #0056b3;
+
+.footer {
+  background-color: rgb(25, 29, 43); /* Dark background */
+  color: #f8f9fa; /* Light text color */
+  padding: 3rem 0;
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .footer-logo {
+    .logo-img {
+      max-width: 200px; /* Adjust size for scaling */
+      margin-bottom: 1rem; /* Spacing from other elements */
+
+      @media (max-width: 768px) {
+        max-width: 150px; /* Smaller size for mobile */
+      }
+    }
+  }
+
+  .footer-nav {
+    .nav {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+
+      .nav-item {
+        .nav-link {
+          color: #f8f9fa;
+          text-decoration: none;
+          font-size: 0.9rem;
+
+          &:hover {
+            color: $primary-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 1rem; /* Add spacing */
+    }
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+
+    .social-icon {
+      font-size: 1.5rem;
+      color: #f8f9fa;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .footer-email-collector {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    .email-input {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 1rem;
+
+      &::placeholder {
+        color: #bbb;
+      }
+    }
+
+    .email-button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(90deg, $secondary-color, $primary-color);
+      }
+    }
+  }
+
+  .footer-buttons {
+    display: flex;
+    gap: 1rem;
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+
+      &.btn-primary {
+        background: linear-gradient(90deg, $primary-color, $secondary-color);
+        color: #fff;
+        border: none;
+
+        &:hover {
+          background: linear-gradient(90deg, $secondary-color, $primary-color);
+        }
+      }
+
+      &.btn-secondary {
+        background: #444;
+        color: #fff;
+        border: 1px solid $primary-color;
+
+        &:hover {
+          background: $primary-color;
+          color: #000;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+
+    .text-body {
+      font-size: 0.875rem;
+      color: #868e96;
+
+      a {
+        color: $primary-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

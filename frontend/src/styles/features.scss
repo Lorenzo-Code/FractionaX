@@ -1,0 +1,49 @@
+.features-section {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.features-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-item {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: start;
+}
+
+.feature-icon {
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: $primary-color;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .feature-item {
+    flex: 1 1 100%; /* Make each item take the full width */
+  }
+
+  .feature-item img {
+    width: 100vw; /* Full viewport width */
+    margin-left: -16px; /* Offset any padding if present */
+    margin-right: -16px; /* Offset any padding if present */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  .features-row {
+    padding: 0; /* Ensure no extra space */
+  }
+}
+
+// @media (max-width: 768px) {
+//   .benefits-grid {
+//     grid-template-columns: repeat(1, 1fr); /* One column per row */
+//     grid-template-rows: repeat(3, auto); /* Three rows on mobile */
+//     gap: 16px; /* Add spacing between items */
+//   }
+// }

@@ -1,0 +1,78 @@
+.header-sticky {
+  position: static;
+  top: 0;
+  z-index: 1020;
+  background: linear-gradient(135deg, $dark-color 50%, #ffffff 50%);
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+
+    .navbar-toggler {
+      background-color: $primary-color;
+      border: none;
+    }
+
+    .navbar-collapse {
+      background-color: $background-color;
+
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .nav-item {
+          .nav-link {
+            color: #fff; /* Text color for button */
+            background-color: $primary-color; /* Button background */
+            padding: 0.5rem 1rem; /* Spacing for button look */
+            border-radius: 20px; /* Rounded corners */
+            font-size: 1rem;
+            text-transform: uppercase;
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+              background-color: $secondary-color; /* Change color on hover */
+              transform: scale(1.05); /* Slightly enlarge on hover */
+            }
+
+            /* Add spacing or separator for visual separation */
+            &:not(:last-child) {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-brand img {
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  // Mobile-specific styles
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      .nav {
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      .nav-link {
+        width: 100%; /* Full-width buttons on mobile */
+        text-align: center; /* Center text */
+      }
+    }
+
+    .navbar-brand img {
+      max-height: 150px;
+    }
+  }
+}
