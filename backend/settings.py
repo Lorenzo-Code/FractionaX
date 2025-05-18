@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'rest_framework', # Added for REST API
     'corsheaders',     # Added for CORS handling
     'marketplace', # Your custom app
-    'myapp',  # Your custom app
+    'myapp.apps.MyappConfig', # Your custom app
     'oauth2_provider',  # Add this line!
     'django_extensions',  # ✅ Enables HTTPS support
 ]
