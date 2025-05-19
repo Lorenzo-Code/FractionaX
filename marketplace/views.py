@@ -15,7 +15,7 @@ from oauth2_provider.views import TokenView
 from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 from .faq_data import faqs
 from .models import TokenOwnership, Investment
-from hedera import TokenCreateTransaction, AccountBalanceQuery, AccountId
+# from hedera import TokenCreateTransaction, AccountBalanceQuery, AccountId
 from backend.hedera_client import hedera_client  # Import the Hedera client
 from .serializers import (
     TokenOwnershipSerializer,

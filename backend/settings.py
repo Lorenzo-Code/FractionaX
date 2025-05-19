@@ -126,7 +126,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # React frontend during development
     'http://127.0.0.1:3000',  # Django Backend using
     'http://10.0.0.216:3000', # Local IP for testing
-    'https://clownfish-app-vhxtw.ondigitalocean.app/',  # Production URL
+    'https://clownfish-app-vhxtw.ondigitalocean.app',  # Production URL
 ]
 CORS_ALLOW_HEADERS = [
     'content-type',
