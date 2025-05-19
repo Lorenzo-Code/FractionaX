@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-5hv0$1^j*bg9tq5p8py#b343lfa(jahyon76qvyj5t#sc5becz
 DEBUG = True
 
 # Allowed hosts
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '10.0.0.216', 'MainComputer.hsd1.tx.comcast.net']  # Add any additional hosts or IPs as needed
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '10.0.0.216', 'MainComputer.hsd1.tx.comcast.net', 'clownfish-app-vhxtw.ondigitalocean.app']  # Add any additional hosts or IPs as needed
 
 
 # Define AUTH_USER_MODEL early
@@ -126,6 +126,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',  # React frontend during development
     'http://127.0.0.1:3000',  # Django Backend using
     'http://10.0.0.216:3000', # Local IP for testing
+    'https://clownfish-app-vhxtw.ondigitalocean.app/',  # Production URL
 ]
 CORS_ALLOW_HEADERS = [
     'content-type',
@@ -145,6 +146,7 @@ CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
     'http://10.0.0.216:3000',
     'http://127.0.0.1:8000',
+    'https://clownfish-app-vhxtw.ondigitalocean.app/',
 ]
 
 # Root URL configuration
